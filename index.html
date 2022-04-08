@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--- https://web-development-environments-2021.github.io/assignment1-ohad13/   -->
 <html>
 
 <head>
@@ -6,27 +7,35 @@
 <br/>
 <br/>
 <link rel="stylesheet" type="text/css" href="style.css" />
-<nav>  
-<ul class="nav">
-  <li class ="active"><a href="#about">About Me</a></li> 
-  <li><a href="#photos">My Photos</a></li>
-  <li><a href="#playlist">My Playlist</a></li>
-  <li><a href="#like">Like</a></li>
-  <li><a href="#qrcoder">QR code</a></li>
-  <li><a href="#qa">Q&A</a></li>
-  <li><a href="#contact">Contact Me</a></li>
-</ul>
-</nav>
+  <nav>  
+      <ul class="nav">
+          <li class ="active"><a href="#about">About Me</a></li> 
+          <li><a href="#photos">My Photos</a></li>
+          <li><a href="#playlist">My Playlist</a></li>
+          <li><a href="#like">Like</a></li>
+          <li><a href="#qrcoder">QR code</a></li>
+          <li><a href="#qa">Q&A</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+      </ul>
+  </nav>
 </head>
 
 <body>
 <section id="about" class="section">
-<h2>About Me</h2>
+
+<h1>Ohad Miller </h1>
+
 <br/>
-Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..
-Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..
-Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..
-Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..
+<br/>
+<br/>
+
+<h2>About Me</h2>
+
+<br/>
+<p>
+  I'm a 26 years old student. I study at Ben Gurion University of the negev.<br/>
+  This is my 3rd year and I can't wait to leave this shithole. 
+</p>
 <br/>
 <br/>
 </section>
@@ -37,10 +46,10 @@ Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Te
 <br/>
 <h2>My Photos</h2>
 <br/>
-<div style="text-align: center;"> <!-- center what inside this div-->
-<img src="cat1.jfif" alt="cat" width="100" height="100" >
-<img src="cat1.jfif" alt="cat" width="100" height="100" >
-</div>
+    <div style="text-align: center;"> <!-- center what inside this div-->
+        <img src="cat1.jfif" alt="cat" width="120" height="120" >
+        <img src="cat1.jfif" alt="cat" width="100" height="100" >
+    </div>
 <br/>
 </section>
 
@@ -55,12 +64,12 @@ Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Te
 <br/>
 <h2>My favorite song</h2>
 <br/>
-<div style="text-align: center;"> <!-- center what inside this div-->
-<iframe width="560" height="315" 
-src="https://www.youtube.com/embed/OUaqWkVv4DM" title="YouTube video player" frameborder="0" 
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-allowfullscreen></iframe>
-</div>
+    <div style="text-align: center; "> <!-- center what inside this div   560x315 -->
+    <iframe width="1120" height="630" 
+    src="https://www.youtube.com/embed/OUaqWkVv4DM" title="YouTube video player" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe>
+    </div>
 <br/>
 
 </section>
@@ -68,22 +77,34 @@ allowfullscreen></iframe>
 <section id="like" class="section">
 <br/>
 <br/>
-<br/>
+<script>
+  var Clicks = 0 ;
+  function AddClick(){
+  Clicks = Clicks + 1;
+  document.getElementById('CountedClicks').innerHTML = Clicks + ' Hits';
+  }
+</script>
 <br/>
 <br/>
 <br/>
 <br/>
 <br/>
 <h2>If you like my website please hit the Like button</h2>
-<script async defer crossorigin="anonymous" 
-src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v13.0" nonce="h6p3VzKA">
-</script>
+    <script async defer crossorigin="anonymous" 
+    src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v13.0" nonce="h6p3VzKA">
+    </script>
 
-<div style="text-align: center;">
-<div class="fb-like" data-href="http://127.0.0.1:5500/index.html" 
-data-width="" data-layout="box_count" data-action="like" data-size="small" data-share="false">
-</div>
-</div>
+    <div style="text-align: center;">
+        <div class="fb-like" data-href="https://web-development-environments-2021.github.io/assignment1-ohad13/" 
+        data-width="" data-layout="box_count" data-action="like" data-size="small" data-share="false">
+        </div>
+        <br/>
+        <!-- LikeBtn.com BEGIN  https://likebtn.com/en/ -->
+        <span class="likebtn-wrapper" data-theme="github" data-ef_voting="push" data-identifier="likeB" data-dislike_enabled="false" data-voting_cancelable="false"></span>
+        <script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
+        <!-- LikeBtn.com END -->
+
+    </div>
 </section>
 
 <section id="qrcoder" class="section">
@@ -96,9 +117,11 @@ data-width="" data-layout="box_count" data-action="like" data-size="small" data-
 <br/>
 <br/>
 <br/>
-<br/>
 <h2>Scan my code</h2>
 <br/>
+    <div style="text-align: center;"> <!-- center what inside this div-->
+      <img src="QRcode.png" alt="cat" width="200" height="200" >
+    </div>
 <br/>
 <br/>
 </section>
@@ -128,20 +151,55 @@ data-width="" data-layout="box_count" data-action="like" data-size="small" data-
 <br/>
 <br/>
 <br/>
-<h2>Contact me</h2>
-<br/>
-<form action="mailto:miller.ohad@gmail.com" method="GET" target="_blank">
-  <h1 class="title">Start Email to ohad</h1>
-  <div class="field"><label class="label" for="subject">Email Subject</label>
-      <input name="subject" id="subject" type="text" class="input" value=""></div>
-  <div class="field"><label class="label" for="body">Email Body</label>
-      <textarea class="textarea" name="body" id="body"></textarea></div>
-  <div><input type="submit" value="Create Email" class="button is-primary"></div>
-</form>
-<br/>
+      <h2>Contact me</h2>
 <br/>
 <br/>
 
+  
+  <div id="drawer" class="emoji-drawer hidden"> 
+    <div class="emoji" onclick="addEmoji(this.innerHTML)">😀</div>
+    <div class="emoji" onclick="addEmoji(this.innerHTML)">😃</div>
+    <div class="emoji" onclick="addEmoji(this.innerHTML)">😄</div>
+    <div class="emoji" onclick="addEmoji(this.innerHTML)">😁</div>
+    <div class="emoji" onclick="addEmoji(this.innerHTML)">😆</div>
+  </div>
+  <form action="https://formsubmit.co/miller.ohad@gmail.com" method="POST">
+    <input type="email" name="email" placeholder="Email Address from" required>
+    <input id="emo" type="text" name="name" placeholder="text" required>
+    <input type="hidden" name="_next" value="https://web-development-environments-2021.github.io/assignment1-ohad13/">
+    <input type="hidden" name="_captcha" value="false"> <!-- remove the: "not a robot" page -->
+    <button type="submit">Submit</button>
+  </form>
+<button onclick="toggleEmojiDrawer()">Emojis</button>
+<script>
+  function addEmoji(emoji) 
+  {
+    let inputEle = document.getElementById('input');
+    emo.value += emoji;
+  }
+  function toggleEmojiDrawer() 
+  {
+    let drawer = document.getElementById('drawer');
+    
+    if (drawer.classList.contains('hidden')) {
+      drawer.classList.remove('hidden');
+    } else {
+      drawer.classList.add('hidden');
+    }
+  }
+  </script>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 <br/>
 </section>
 

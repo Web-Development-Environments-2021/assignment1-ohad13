@@ -27,7 +27,17 @@ ul.nav > li > a {
 	color: white;
 	text-decoration: none;
   }
-  
+h1{
+	text-align: center;
+	color:rgb(21, 0, 255);
+	display: block;
+	font-size: 3em;
+	margin-top: 0.80em;
+	margin-bottom: 0.80em;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
+  }
 h2 {
 	text-align: center;
 	color:red;
@@ -40,8 +50,41 @@ h2 {
 	font-weight: bold;
   }
 
+p{
+	color:black;
+	text-align : center;
+	font-size: 1.5em;
+  }
+
   IMG.displayed { 
     display: block;
     margin-left: auto;
     margin-right: auto 
 }
+
+
+
+  .emoji-drawer {
+	  display: grid;
+  
+	  grid-template-columns: repeat(3, 1fr);
+  
+	  width: 100px;
+  
+	  margin-bottom: 32px;
+	  transition: opacity 0.2s;
+  }
+  
+  .hidden {
+	opacity: 0;
+  }
+  
+  .emoji {
+	  text-align: center;
+	  font-size: 24px;
+	  padding: 8px;
+  }
+  
+  .emoji:hover {
+	  cursor: pointer;
+  }
