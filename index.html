@@ -1,38 +1,32 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+<br/>
+<br/>
+<br/>
 <link rel="stylesheet" type="text/css" href="style.css" />
+<nav>  
+<ul class="nav">
+  <li class ="active"><a href="#about">About Me</a></li> 
+  <li><a href="#photos">My Photos</a></li>
+  <li><a href="#playlist">My Playlist</a></li>
+  <li><a href="#like">Like</a></li>
+  <li><a href="#qrcoder">QR code</a></li>
+  <li><a href="#qa">Q&A</a></li>
+  <li><a href="#contact">Contact Me</a></li>
+</ul>
+</nav>
 </head>
+
 <body>
-<div id="menu">
-<li><a href="#about">About Me</a></li>
-<li><a href="#photos">My Photos</a></li>
-<li><a href="#playlist">My Playlist</a></li>
-<li><a href="#like">Like</a></li>
-<li><a href="#qrcoder">QR code</a></li>
-<li><a href="#spa">Q&A</a></li>
-<li><a href="#contact">Contact Me</a></li>
-</div>
-		  
 <section id="about" class="section">
+<h2>About Me</h2>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-about me
-<br/>
+Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..
+Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..
+Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..
+Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..Text..
 <br/>
 <br/>
 </section>
@@ -41,22 +35,12 @@ about me
 <br/>
 <br/>
 <br/>
+<h2>My Photos</h2>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my photos
-<br/>
-<br/>
+<div style="text-align: center;"> <!-- center what inside this div-->
+<img src="cat1.jfif" alt="cat" width="100" height="100" >
+<img src="cat1.jfif" alt="cat" width="100" height="100" >
+</div>
 <br/>
 </section>
 
@@ -69,18 +53,16 @@ my photos
 <br/>
 <br/>
 <br/>
+<h2>My favorite song</h2>
 <br/>
+<div style="text-align: center;"> <!-- center what inside this div-->
+<iframe width="560" height="315" 
+src="https://www.youtube.com/embed/OUaqWkVv4DM" title="YouTube video player" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+</div>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my playlist
-<br/>
-<br/>
-<br/>
+
 </section>
 
 <section id="like" class="section">
@@ -92,18 +74,16 @@ my playlist
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-give me a like
-<br/>
-<br/>
-<br/>
+<h2>If you like my website please hit the Like button</h2>
+<script async defer crossorigin="anonymous" 
+src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v13.0" nonce="h6p3VzKA">
+</script>
+
+<div style="text-align: center;">
+<div class="fb-like" data-href="http://127.0.0.1:5500/index.html" 
+data-width="" data-layout="box_count" data-action="like" data-size="small" data-share="false">
+</div>
+</div>
 </section>
 
 <section id="qrcoder" class="section">
@@ -117,36 +97,24 @@ give me a like
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-scan my code
+<h2>Scan my code</h2>
 <br/>
 <br/>
 <br/>
 </section>
 
-<section id="spa" class="section">
+<section id="qa" class="section">
 <br/>
 <br/>
 <br/>
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-ans
+<h2>Answers</h2>
+<p>
+  This is the Answers for the questions from assignment 1:<br>
+  ans.....
+</p>
 <br/>
 <br/>
 <br/>
@@ -160,34 +128,23 @@ ans
 <br/>
 <br/>
 <br/>
+<h2>Contact me</h2>
+<br/>
+<form action="mailto:miller.ohad@gmail.com" method="GET" target="_blank">
+  <h1 class="title">Start Email to ohad</h1>
+  <div class="field"><label class="label" for="subject">Email Subject</label>
+      <input name="subject" id="subject" type="text" class="input" value=""></div>
+  <div class="field"><label class="label" for="body">Email Body</label>
+      <textarea class="textarea" name="body" id="body"></textarea></div>
+  <div><input type="submit" value="Create Email" class="button is-primary"></div>
+</form>
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-contact me
-<br/>
-<br/>
+
 <br/>
 </section>
 
 
-<script type="text/javascript">
-$(function(){
-  $("#nav a").click(function(e){
-    e.preventDefault();
-    $('html,body').scrollTo(this.hash,this.hash); 
-  });
-});
-</script>
-<script type="text/javascript">
- $(document).scroll(function() {
-    $('#menu').toggle($(this).scrollTop()>1000)
- });​
- </script>
 </body>
 </html>
