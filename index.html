@@ -21,20 +21,19 @@
 </head>
 
 <body>
+  
 <section id="about" class="section">
 
-<h1>Ohad Miller </h1>
-
+<h1>Ohad Miller</h1>
+<!-- marquee>I wanna scroll with it, baby!</marquee -- slide text from right to left -->
 <br/>
 <br/>
 <br/>
-
-<h2>About Me</h2>
-
+<h2 class="separator">About Me</h2>
 <br/>
 <p>
   I'm a 26 years old student. I study at Ben Gurion University of the negev.<br/>
-  This is my 3rd year and I can't wait to leave this shithole. 
+  This is my 3rd year and I can't wait to leave this place. 
 </p>
 <br/>
 <br/>
@@ -43,13 +42,32 @@
 <section id="photos" class="section">
 <br/>
 <br/>
+<h2 class="separator">My Photos</h2>
 <br/>
-<h2>My Photos</h2>
-<br/>
-    <div style="text-align: center;"> <!-- center what inside this div-->
-        <img src="cat1.jfif" alt="cat" width="120" height="120" >
-        <img src="cat1.jfif" alt="cat" width="100" height="100" >
-    </div>
+<!---->
+<div id="imageGallery" style="text-align: center;">    
+  <img id="image" src="src/trip1.jpg" width="500" height="400" text-align="center"/>        
+</div>
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script><!-- import the JQury lib-->
+
+<script>
+  $( document ).ready(function() {
+      var images = [
+          "src/trip1.jpg",
+          "src/trip2.jpg",
+          "src/trip3.jpg"    
+      ];
+      var imageIndex = 0;
+      $("#image").on("click", function(){          
+          imageIndex = (imageIndex + images.length -1) % (images.length);    
+          $("#image").attr('src', images[imageIndex]);
+      });
+      $("#image").attr(images[0]);
+
+  });
+</script>
+<!---->
 <br/>
 </section>
 
@@ -58,82 +76,67 @@
 <br/>
 <br/>
 <br/>
+
+<h2 class="separator">My favorite song</h2>
 <br/>
-<br/>
-<br/>
-<br/>
-<h2>My favorite song</h2>
-<br/>
-    <div style="text-align: center; "> <!-- center what inside this div   560x315 -->
-    <iframe width="1120" height="630" 
+    <div style="text-align: center;" > <!-- center what inside this div -->
+    <iframe width="560" height="315" 
     src="https://www.youtube.com/embed/OUaqWkVv4DM" title="YouTube video player" frameborder="0" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen></iframe>
     </div>
 <br/>
-
 </section>
 
 <section id="like" class="section">
 <br/>
 <br/>
-<script>
-  var Clicks = 0 ;
-  function AddClick(){
-  Clicks = Clicks + 1;
-  document.getElementById('CountedClicks').innerHTML = Clicks + ' Hits';
-  }
-</script>
 <br/>
 <br/>
 <br/>
 <br/>
 <br/>
-<h2>If you like my website please hit the Like button</h2>
+<h2 class="separator">If you like my website please hit the Like button</h2>
     <script async defer crossorigin="anonymous" 
     src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v13.0" nonce="h6p3VzKA">
     </script>
 
     <div style="text-align: center;">
         <div class="fb-like" data-href="https://web-development-environments-2021.github.io/assignment1-ohad13/" 
-        data-width="" data-layout="box_count" data-action="like" data-size="small" data-share="false">
+            data-width="" data-layout="box_count" data-action="like" data-size="small" data-share="false">
         </div>
         <br/>
         <!-- LikeBtn.com BEGIN  https://likebtn.com/en/ -->
-        <span class="likebtn-wrapper" data-theme="github" data-ef_voting="push" data-identifier="likeB" data-dislike_enabled="false" data-voting_cancelable="false"></span>
-        <script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
-        <!-- LikeBtn.com END -->
+        <span class="likebtn-wrapper" data-theme="github" data-ef_voting="push" data-identifier="likeB" 
+            data-dislike_enabled="false" data-voting_cancelable="false">
+        </span>
 
+        <script>
+            (function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];
+            a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");
+        </script>
+        <!-- LikeBtn.com END -->
     </div>
 </section>
 
 <section id="qrcoder" class="section">
 <br/>
+
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<h2>Scan my code</h2>
+<h2 class="separator">Scan my code</h2>
+<p>You can send this QR code to your friends so they can join us on the website</p>
 <br/>
     <div style="text-align: center;"> <!-- center what inside this div-->
-      <img src="QRcode.png" alt="cat" width="200" height="200" >
+      <img src="src/QRcode.png" alt="cat" width="200" height="200" >
     </div>
-<br/>
-<br/>
 </section>
-
 <section id="qa" class="section">
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<h2>Answers</h2>
+
+<h2 class="separator">Answers</h2>
 <p>
   This is the Answers for the questions from assignment 1:<br>
   ans.....
@@ -142,67 +145,79 @@
 <br/>
 <br/>
 </section>
-
 <section id="contact" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-      <h2>Contact me</h2>
-<br/>
-<br/>
+  <h2 class="separator">Contact me</h2>
+  We are more then happy to hear from you about any thing you like
+    <form action="https://formsubmit.co/miller.ohad@gmail.com" method="POST">
+      <input style="width: 400px; height: 20px;" title="מייל השולח" type="email" name="email" placeholder="Email Address from" required></br>
+      <!--input  title="תוכן ההודעה" id="emo1" type="text" name="name" placeholder="text" white-space="pre"; required></br-->
+      <textarea id="emo" style="width: 400px; height: 100px;" title="תוכן ההודעה" placeholder="text" wrap="soft"></textarea>
+      <input type="hidden" name="_next" value="https://web-development-environments-2021.github.io/assignment1-ohad13/">
+      <button title="שלח" type="submit">Submit</button></br>
+      <button onclick="toggleEmojiDrawer()">Emojis</button></br>
 
-  
-  <div id="drawer" class="emoji-drawer hidden"> 
-    <div class="emoji" onclick="addEmoji(this.innerHTML)">😀</div>
-    <div class="emoji" onclick="addEmoji(this.innerHTML)">😃</div>
-    <div class="emoji" onclick="addEmoji(this.innerHTML)">😄</div>
-    <div class="emoji" onclick="addEmoji(this.innerHTML)">😁</div>
-    <div class="emoji" onclick="addEmoji(this.innerHTML)">😆</div>
-  </div>
-  <form action="https://formsubmit.co/miller.ohad@gmail.com" method="POST">
-    <input type="email" name="email" placeholder="Email Address from" required>
-    <input id="emo" type="text" name="name" placeholder="text" required>
-    <input type="hidden" name="_next" value="https://web-development-environments-2021.github.io/assignment1-ohad13/">
-    <input type="hidden" name="_captcha" value="false"> <!-- remove the: "not a robot" page -->
-    <button type="submit">Submit</button>
-  </form>
-<button onclick="toggleEmojiDrawer()">Emojis</button>
-<script>
-  function addEmoji(emoji) 
-  {
-    let inputEle = document.getElementById('input');
-    emo.value += emoji;
-  }
-  function toggleEmojiDrawer() 
-  {
-    let drawer = document.getElementById('drawer');
+      <input type="hidden" name="_captcha" value="false"> <!-- remove the: "not a robot" page -->
+    </form> 
+        <div id="drawer" class="emoji-drawer hidden"> 
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">😀</div>
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">😃</div>
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">😄</div>
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">😁</div>
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">😆</div>
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">🧐</div>
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">✌</div>
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">😍</div>
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">😎</div>
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">😂</div>
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">🤓</div>
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">😔</div>
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">😘</div>
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">😱</div>
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">🤠</div>
+        </div>
     
-    if (drawer.classList.contains('hidden')) {
-      drawer.classList.remove('hidden');
-    } else {
-      drawer.classList.add('hidden');
+    <!-- Social Buttons-->
+    <p text-align="center">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <br>
+      <a href="https://www.facebook.com/sise.bgu" class="fa fa-facebook"></a>
+      <a href="https://www.linkedin.com/in/ohad-miller-sise/" class="fa fa-linkedin"></a>
+      <a href="https://www.instagram.com/bengurionuniversity/" class="fa fa-instagram"></a>
+      <a href="https://github.com/ohad13" class="fa fa-github"></a> 
+  </p>
+  <!-- Scroll up Button-->
+   <button id="scrollToTopBtn" style="text-align: middle;">☝️</button>
+  
+  <script>
+    function addEmoji(emoji) 
+    {
+      let inputEle = document.getElementById('input');
+      emo.value += emoji;
     }
-  }
-  </script>
+    function toggleEmojiDrawer() 
+    {
+      let drawer = document.getElementById('drawer');
+      if (drawer.classList.contains('hidden')) {
+        drawer.classList.remove('hidden');
+      } else {
+        drawer.classList.add('hidden');
+      }
+    }
+    </script>
+    
+    <script>
+        var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+        var rootElement = document.documentElement;
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+        function scrollToTop() {
+          // Scroll to top logic
+          rootElement.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+        }
+        scrollToTopBtn.addEventListener("click", scrollToTop);
+    </script>
 </section>
-
-
 </body>
 </html>

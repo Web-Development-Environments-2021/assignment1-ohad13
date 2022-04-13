@@ -6,6 +6,12 @@
 	background: red;
 }
 
+body {
+	background-color: rgb(255, 255, 255);
+	
+}
+  
+
 ul.nav {
 	margin-top: 0;
 	position: fixed;
@@ -15,10 +21,12 @@ ul.nav {
 	padding-left: 0px;
 	background-color: #3D99CE;
 	text-align: center;
+	
   }
 ul.nav > li {
 	display: inline-block;
-	padding: 10px 20px;
+	
+	padding: 20px 30px;
   }
 ul.nav > li:hover {
 	background-color: #2779BF;
@@ -26,6 +34,8 @@ ul.nav > li:hover {
 ul.nav > li > a {
 	color: white;
 	text-decoration: none;
+	color: white;
+	font-size: 1.2em;
   }
 h1{
 	text-align: center;
@@ -40,7 +50,7 @@ h1{
   }
 h2 {
 	text-align: center;
-	color:red;
+	color:rgb(0, 128, 122);
 	display: block;
 	font-size: 2em;
 	margin-top: 0.67em;
@@ -56,17 +66,14 @@ p{
 	font-size: 1.5em;
   }
 
-  IMG.displayed { 
+IMG.displayed { 
     display: block;
     margin-left: auto;
     margin-right: auto 
 }
-
-
-
-  .emoji-drawer {
+.emoji-drawer {
 	  display: grid;
-  
+	  
 	  grid-template-columns: repeat(3, 1fr);
   
 	  width: 100px;
@@ -75,16 +82,105 @@ p{
 	  transition: opacity 0.2s;
   }
   
-  .hidden {
+.hidden {
 	opacity: 0;
   }
   
-  .emoji {
+.emoji {
 	  text-align: center;
 	  font-size: 24px;
 	  padding: 8px;
   }
   
-  .emoji:hover {
+.emoji:hover {
 	  cursor: pointer;
+  }
+
+.separator {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	}
+
+.separator::before,
+.separator::after {
+	content: '';
+	flex: 1;
+	border-bottom: 4px solid rgb(53, 43, 234);
+	}
+
+.separator:not(:empty)::before {
+	margin-right: .25em;
+	}
+
+.separator:not(:empty)::after {
+	margin-left: .25em;
+	}
+	input[type=text] {
+        word-wrap: break-word;
+        word-break: break-all;
+        height: 80px;
+    }
+
+	#scrollToTopBtn {
+		background-color: black;
+		border: none;
+		color: white;
+		cursor: pointer;
+		font-size: 18px;
+		line-height: 48px;
+		width: 48px;
+	  }
+
+
+	/* Socail Buttons*/
+  .fa {
+	padding: 15px;
+	font-size: 20px;
+	width: 50px;
+	text-align: center;
+	text-decoration: none;
+	margin: 5px 2px;
+  }
+  
+  .fa:hover {
+	opacity: 0.7;
+  }
+  
+  .fa-facebook {
+	border-radius: 20px;
+	background: #3B5998;
+	color: white;
+  }
+  
+  .fa-linkedin {
+	border-radius: 20px;
+	background: #007bb5;
+	color: white;
+	font-size: 20;
+  }
+  
+  .fa-instagram {
+	border-radius: 20px;
+	background: #dda652;
+	color: white;
+	font-size: 25;
+  }
+  
+  .fa-github {
+	border-radius: 20px;
+	background: rgb(70, 63, 63);
+	color: white;
+	font-size: 25;
+  }
+
+  .button {
+	background-color: #4CAF50; /* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
   }
