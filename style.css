@@ -7,7 +7,7 @@
 }
 
 body {
-	background-color: rgb(255, 255, 255);
+	background-color:rgb(0, 243, 198)
 	
 }
   
@@ -64,6 +64,12 @@ p{
 	color:black;
 	text-align : center;
 	font-size: 1.5em;
+  }
+
+  pi{
+	color:black;
+	text-align : left;
+	font-size: 1.2em;
   }
 
 IMG.displayed { 
@@ -183,4 +189,17 @@ IMG.displayed {
 	text-decoration: none;
 	display: inline-block;
 	font-size: 16px;
+  }
+
+  table, th, td {
+	border: 1px solid white;
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;  
+	text-align: end;
+	}
+  th, td {
+	background-color: #96d4a9;
+	margin-left: auto;
+	margin-right: auto;
   }
